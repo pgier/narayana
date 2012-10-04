@@ -2017,7 +2017,7 @@ public class BasicAction extends StateManager
         {
             int numberOfThreads = ((pendingList != null) ? pendingList.size()
                     : 0);
-            Thread[] threads = new Thread[numberOfThreads];
+            AsyncPrepare[] threads = new AsyncPrepare[numberOfThreads];
             int i;
 
             /*
@@ -2031,47 +2031,19 @@ public class BasicAction extends StateManager
             }
 
             /*
-                * Now start the threads running.
-                */
-
-            for (i = 0; i < numberOfThreads; i++)
-            {
-                threads[i].start();
-                Thread.yield();
-            }
-
-            /*
-                * If one of these threads fails (PREPARE_NOTOK) do we terminate the
-                * others or simply let them finish? Currently we wait and let them
-                * all terminate regardless.
-                */
-
-            /*
                 * Now synchronise with the threads.
                 */
 
             for (int j = 0; j < numberOfThreads; j++)
             {
-                while (threads[j].isAlive())
-                {
-                    try
-                    {
-                        threads[j].join();
-                    }
-                    catch (Exception e)
-                    {
-                        tsLogger.logger.warn(e);
-
-                        p = TwoPhaseOutcome.PREPARE_NOTOK;
-                    }
-                }
-
                 /*
                      * Only set the outcome if the current value is PREPARE_OK.
                      */
 
+            	// Have to collect the result as that releases the thread
+            	int outcome = ((AsyncPrepare) threads[j]).outcome();
                 if (p == TwoPhaseOutcome.PREPARE_OK)
-                    p = ((AsyncPrepare) threads[j]).outcome();
+                    p = outcome;
 
                 threads[j] = null;
             }
