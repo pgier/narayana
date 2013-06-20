@@ -23,6 +23,11 @@
   <packaging>jar</packaging>
   <name>Narayana: XTS sar</name>
   <description>Narayana: XTS sar</description>
+  <properties>
+    <buildType>11</buildType>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -103,7 +108,4 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-  <properties>
-    <buildType>11</buildType>
-  </properties>
 </project>

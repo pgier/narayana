@@ -25,6 +25,11 @@
   <description>Narayana: ArjunaJTS idl jacorb</description>
   <packaging>jar</packaging>
 
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
+
   <build>
     <plugins>
       <!-- generate a test jar containing test CORBA stubs for use by the jts tests -->

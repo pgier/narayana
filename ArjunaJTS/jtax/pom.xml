@@ -23,6 +23,10 @@
   <name>Narayana: ArjunaJTS jtax</name>
   <packaging>jar</packaging>
   <description>Narayana: ArjunaJTS jtax</description>
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <build>
     <sourceDirectory>classes</sourceDirectory>
     <testSourceDirectory>tests/classes</testSourceDirectory>

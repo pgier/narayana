@@ -29,6 +29,8 @@
         <skipEnabledPropagationTests>false</skipEnabledPropagationTests>
         <skipDisabledPropagationTests>false</skipDisabledPropagationTests>
         <version.plugin.antrun>1.7</version.plugin.antrun>
+        <!-- Skip deployment to Maven repository -->
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
     <build>

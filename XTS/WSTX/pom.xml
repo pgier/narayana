@@ -23,6 +23,10 @@
   <packaging>jar</packaging>
   <name>Narayana: XTS WSTX</name>
   <description>Narayana: XTS WSTX (wstx11)</description>
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <build>
     <sourceDirectory>classes</sourceDirectory>
     <plugins>

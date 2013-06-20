@@ -30,6 +30,8 @@
   <properties>
     <version.artifactId>5.0.0.M4-SNAPSHOT</version.artifactId>
     <artifactId.name>restat-web</artifactId.name>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
   </properties>
   <dependencies>
     <dependency>

@@ -17,4 +17,8 @@
     <packaging>jar</packaging>
     <name>Narayana: XTS localjunit crash-recovery-tests</name>
     <description>xts crash recovery tests</description>
+	<properties>
+        <!-- Skip deployment to Maven repository -->
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
 </project>

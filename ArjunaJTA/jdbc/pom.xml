@@ -23,6 +23,10 @@
   <name>Narayana: ArjunaJTA jdbc</name>
   <description>transactional driver</description>
   <packaging>jar</packaging>
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <build>
     <sourceDirectory>classes</sourceDirectory>
     <resources>

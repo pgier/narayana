@@ -23,6 +23,10 @@
   <name>Narayana: ArjunaJTA cdi</name>
   <description>Narayana: ArjunaJTA cdi</description>
   <packaging>jar</packaging>
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <build>
     <sourceDirectory>classes</sourceDirectory>
     <resources>

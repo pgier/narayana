@@ -23,6 +23,10 @@
   <packaging>jar</packaging>
   <name>Narayana: XTS WS-C</name>
   <description>Narayana: XTS WS-C (wsc11)</description>
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <build>
     <sourceDirectory>dev/src</sourceDirectory>
     <resources>

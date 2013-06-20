@@ -27,6 +27,8 @@
     <!-- This module builds two jars each holding different sets of IDL stubs (JacORB or Sun orb) -->
     <classesDirectoryWithJacorb>${project.build.directory}/jts-jacorb</classesDirectoryWithJacorb>
     <classesDirectoryWithIdlj>${project.build.directory}/jts-idlj</classesDirectoryWithIdlj>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
   </properties>
 
   <build>

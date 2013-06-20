@@ -26,6 +26,8 @@
         <server.debug.args>Xdebug -Xnoagent -Djava.compiler=NONE
             -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5006
         </server.debug.args>
+        <!-- Skip deployment to Maven repository -->
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
     <build>

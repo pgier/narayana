@@ -11,6 +11,10 @@
   <artifactId>core</artifactId>
   <name>Narayana: STM</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

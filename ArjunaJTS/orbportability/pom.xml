@@ -23,6 +23,10 @@
   <name>Narayana: ArjunaJTS orbportability</name>
   <description>orb portability harness</description>
   <packaging>jar</packaging>
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <build>
     <sourceDirectory>classes</sourceDirectory>
     <resources>

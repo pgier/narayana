@@ -23,6 +23,10 @@
   <packaging>jar</packaging>
   <name>Narayana: XTS WSAS xts-test-servlet</name>
   <description>Narayana: XTS WSAS xts-test-servlet</description>
+  <properties>
+    <!-- Skip deployment to Maven repository -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
   <build>
     <sourceDirectory>../tests/classes</sourceDirectory>
     <plugins>

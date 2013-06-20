@@ -16,4 +16,8 @@
 	<packaging>jar</packaging>
 	<name>Narayana: XTS WSTX11-interop</name>
 	<description>JBoss Transactions WS-Addressing interop test</description>
+    <properties>
+        <!-- Skip deployment to Maven repository -->
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
 </project>
